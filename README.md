@@ -70,10 +70,37 @@ v12.22.4
 
 npm install -g yarn
 
+```
 
+## Git Clone
+```
+자신의 root folder에서
+<b>git clone https://github.com/chomskim/EP2021.git</b>
+하면 EP2021 folder가 생긴다.
+그 후에는 수시로 pull 하면 된다
+```
 
+## VS Code Setting For React Dev
 
+### Extension 설치
+-Auto Rename Tag
+-Bracket Pair Colorizer
+-ES7 React/Redux/GraphQL/React-Native snippets
+-indent-rainbow
+-Prettier - Code formatter
 
-
-
+### Setting
+```
+"emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+"editor.formatOnPaste": true,
+"editor.formatOnSave": true,
+"prettier.jsxSingleQuote": true,
+"prettier.semi": true,
+"prettier.singleQuote": true,
+"[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  ```
 
