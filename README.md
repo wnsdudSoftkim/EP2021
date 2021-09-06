@@ -75,7 +75,7 @@ npm install -g yarn
 ## Git Clone
 <pre>
 자신의 root folder에서
-<br>git clone https://github.com/chomskim/EP2021.git</br>
+<b>git clone https://github.com/chomskim/EP2021.git</b>
 하면 EP2021 folder가 생긴다.
 그 후에는 수시로 pull 하면 된다
 </pre>
