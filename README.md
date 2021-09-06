@@ -75,7 +75,7 @@ npm install -g yarn
 ## Git Clone
 ```
 자신의 root folder에서
-<b>git clone https://github.com/chomskim/EP2021.git</b>
+<br>git clone https://github.com/chomskim/EP2021.git</br>
 하면 EP2021 folder가 생긴다.
 그 후에는 수시로 pull 하면 된다
 ```
@@ -83,11 +83,11 @@ npm install -g yarn
 ## VS Code Setting For React Dev
 
 ### Extension 설치
--Auto Rename Tag
--Bracket Pair Colorizer
--ES7 React/Redux/GraphQL/React-Native snippets
--indent-rainbow
--Prettier - Code formatter
+- Auto Rename Tag
+- Bracket Pair Colorizer
+- ES7 React/Redux/GraphQL/React-Native snippets
+- indent-rainbow
+- Prettier - Code formatter
 
 ### Setting
 ```
