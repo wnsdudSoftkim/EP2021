@@ -21,6 +21,7 @@ sudo apt autoremove
 
 # 기본 SW
 sudo apt install perl gcc make
+# VirtualBox Guest Extension Package Insert 가능
 sudo apt install curl g++ net-tools git
 
 # File Process 수 늘리기
