@@ -80,6 +80,11 @@ npm install -g yarn
 하면 EP2021 folder가 생긴다.
 그 후에는 수시로 pull 하면 된다
 </pre>
+자신의 GitHub를 만들면
+```
+git config --global user.name <github-username>
+git config --global user.email <github-email>
+```
 
 ## VS Code Setting For React Dev
 
