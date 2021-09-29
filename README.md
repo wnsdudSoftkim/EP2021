@@ -121,16 +121,20 @@ git config --global user.email <github-email>
 
 ## Create React App
 
-> $ npx create-react-app hello-react
-> $ cd hello-react
-> $ npm start
+```
+$ npx create-react-app hello-react
+$ cd hello-react
+$ npm start
 
-> $ npx create-react-app test-js
+$ npx create-react-app test-js
+```
 
 ### Copy hello-react project to hello-react-copy
 
 ### Copy package.json, public, src
 
-> $ cd hello-react-copy
-> $ npm install
-> $ npm start
+```
+$ cd hello-react-copy
+$ npm install
+$ npm start
+```
