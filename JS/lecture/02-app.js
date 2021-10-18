@@ -75,15 +75,33 @@ userList.forEach((user) => {
   console.log(user);
 });
 console.log('==============================');
-
-let user1 = userList[0];
-console.log(user1);
-
-let { id, name, amount } = user1; // Desturing
-console.log(id, name, amount);
-
-let newUser = { id, user: name };
-console.log(newUser);
-
-newUser = { ...user1, user: name }; // Spread
-console.log(newUser);
+let newUserList = userList.map((user) => {
+  let { id, name, amount } = user;
+  return {
+    id,
+    name,
+    amount,
+  };
+});
+newUserList.forEach((user) => {
+  console.log(user);
+});
+// delete id === 1
+console.log('==============================');
+console.log('delete id === 1');
+newUserList = newUserList.filter((user) => user.id !== '1');
+newUserList.forEach((user) => {
+  console.log(user);
+});
+// update for id===2 amount=200
+console.log('==============================');
+console.log('update for id===2 amount=200');
+let updUser = newUserList.filter((user) => user.id === '2')[0];
+console.log('updUser=', updUser);
+updUser = { ...updUser, amount: 200 };
+console.log('updUser=', updUser);
+newUserList = newUserList.filter((user) => user.id !== '2');
+newUserList = [...newUserList, updUser];
+newUserList.forEach((user) => {
+  console.log(user);
+});
