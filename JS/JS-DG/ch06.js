@@ -127,3 +127,10 @@ console.log(myObj['foo'](1));
 console.log(myObj.hello);
 console.log(myObj['world']);
 console.log(JSON.stringify(myObj));
+
+// Use IIFE
+(() => {
+  let obj = { x: 100, y: 200, z: 300 };
+  let { x, y } = obj;
+  console.log(x, y);
+})();

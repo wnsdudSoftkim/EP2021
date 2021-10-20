@@ -126,3 +126,11 @@ console.log(a.splice(1, 2)); // => [2,3]; a is now [1,4]
 console.log(a);
 console.log(a.splice(1, 1)); // => [4]; a is now [1]
 console.log(a);
+
+// Use IIFE
+(() => {
+  let x = 100;
+  let y = 200;
+  [x, y] = [y, x];
+  console.log(x, y);
+})();
