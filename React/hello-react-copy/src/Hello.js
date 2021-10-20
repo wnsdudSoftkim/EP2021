@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 import userList from './userList';
 
-import { mean, stddev } from './ch10-node-export';
-import stat from './ch10-node-export-default';
+import { mean, stddev } from './ch10-es6-export';
+import stat from './ch10-es6-export-default';
 
 const Hello = () => {
   let mea = mean([1, 3, 5, 7, 9]); // => 5

@@ -1,5 +1,5 @@
-import { mean, stddev } from './ch10-node-export';
-import stat from './ch10-node-export-default';
+import { mean, stddev } from './ch10-es6-export';
+import stat from './ch10-es6-export-default';
 let mea = mean([1, 3, 5, 7, 9]); // => 5
 let std = stddev([1, 3, 5, 7, 9]); // => Math.sqrt(10)
 console.log(mea);
