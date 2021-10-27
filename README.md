@@ -138,3 +138,28 @@ $ cd hello-react-copy
 $ npm install
 $ npm start
 ```
+
+### Install AWS CLI
+
+```
+$ sudo apt install -y python3-pip
+$ sudo apt install -y build-essential libssl-dev libffi-dev python3-dev
+$ sudo apt install -y python3-venv
+$ pip3 install awscli
+```
+
+### Configure AWS
+
+```
+$ aws configure
+AWS Access Key ID [None]: aaaaaaa
+AWS Secret Access Key [None]: bbbbbbbb
+Default region name [None]: ap-northeast-2
+Default output format [None]:
+```
+
+### Installing and Configuring the Amplify CLI
+
+```
+npm install -g @aws-amplify/cli
+```
