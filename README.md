@@ -163,3 +163,7 @@ Default output format [None]:
 ```
 npm install -g @aws-amplify/cli
 ```
+
+## 서버리스 웹앱 개발 튜토링 사이트 URL
+
+[serverless web app using AWS, react and AI](https://medium.com/develop-and-deploy-a-complex-serverless-web-app)
