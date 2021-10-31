@@ -152,8 +152,8 @@ $ pip3 install awscli
 
 ```
 $ aws configure
-AWS Access Key ID [None]: aaaaaaa
-AWS Secret Access Key [None]: bbbbbbbb
+AWS Access Key ID [None]: ********************
+AWS Secret Access Key [None]: ****************************************
 Default region name [None]: ap-northeast-2
 Default output format [None]:
 ```
