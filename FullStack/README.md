@@ -173,8 +173,7 @@ $ amplify add function
 ? Select which capability you want to add: <b>Lambda function (serverless function)</b>
 ? Provide an AWS Lambda function name: <b>cryptofunction</b>
 ? Choose the runtime that you want to use: <b>NodeJS</b>
-? Choose the function template that you want to use: <b>Serverless ExpressJS function (In
-tegration with API Gateway)</b>
+? Choose the function template that you want to use: <b>Serverless ExpressJS function (Integration with API Gateway)</b>
 
 Available advanced settings:
 - Resource access permissions
