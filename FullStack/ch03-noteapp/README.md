@@ -57,7 +57,8 @@ App not deployed yet.
 
 GraphQL schema compiled successfully.
 
-Edit your schema at /home/cskim/git-repo/EP2021/FullStack/ch03-noteapp/amplify/backend/api/notesapi/schema.graphql or place .graphql files in a directory at /home/cskim/git-repo/EP2021/FullStack/ch03-noteapp/amplify/backend/api/notesapi/schema
+Edit your schema at /home/cskim/git-repo/EP2021/FullStack/ch03-noteapp/amplify/backend/api/notesapi/schema.graphql 
+or place .graphql files in a directory at /home/cskim/git-repo/EP2021/FullStack/ch03-noteapp/amplify/backend/api/notesapi/schema
 ? Do you want to edit the schema now? <b>Yes</b>
 ? Choose your default editor: <b>Visual Studio Code</b>
 Edit the file in your editor: <b>/home/cskim/git-repo/EP2021/FullStack/ch03-noteapp/amplify/backend/api/notesapi/schema.graphql
