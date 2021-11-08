@@ -118,11 +118,11 @@ Missing AmplifyAppId in amplify-meta.json
 Amplify App  갯수가 25가 넘어서 생기는 에러
 </pre>
 
-AWS Console Login
-Service Quotas > AWS services > AWS Amplify
-에서 Quota를 25에서 50으로 늘림 (It takes several days)
+AWS Console Login  
+Service Quotas > AWS services > AWS Amplify  
+에서 Quota를 25에서 50으로 늘림 (It takes several days)  
 
-On Case of Error
+On Case of Error  
 <pre>
 $ amplify delete
 ? Are you sure you want to continue? This CANNOT be undone. (This will delete all the environments of the proje
