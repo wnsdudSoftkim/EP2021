@@ -93,7 +93,8 @@ App not deployed yet.
 
 GraphQL schema compiled successfully.
 
-Edit your schema at /home/cskim/git-repo/EP2021/FullStack/ch03-noteapp/amplify/backend/api/notesapi/schema.graphql or place .graphql files in a directory at /home/cskim/git-repo/EP2021/FullStack/ch03-noteapp/amplify/backend/api/notesapi/schema
+Edit your schema at /home/cskim/git-repo/EP2021/FullStack/ch03-noteapp/amplify/backend/api/notesapi/schema.graphql or 
+place .graphql files in a directory at /home/cskim/git-repo/EP2021/FullStack/ch03-noteapp/amplify/backend/api/notesapi/schema
 ? Do you want to generate code for your newly created GraphQL API <b>Yes</b>
 ? Choose the code generation language target <b>javascript</b>
 ? Enter the file name pattern of graphql queries, mutations and subscriptions <b>src/graphql/**/*.js</b>
@@ -121,6 +122,7 @@ AWS Console Login
 Service Quotas > AWS services > AWS Amplify
 에서 Quota를 25에서 50으로 늘림 (It takes several days)
 
+On Case of Error
 <pre>
 $ amplify delete
 ? Are you sure you want to continue? This CANNOT be undone. (This will delete all the environments of the proje
@@ -130,7 +132,7 @@ Deleting env: dev.
 ✔ Project deleted in the cloud.
 Project deleted locally.
 
-On Case of Error, 앞의 Step 반복
+앞의 Step 반복
 $ amplify init
 $ amplify add api
 $ amplify push
