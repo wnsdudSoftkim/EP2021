@@ -7,6 +7,8 @@ function App() {
   // Create coins variable and set to empty array
   const [coins, updateCoins] = useState([]);
   const [input, updateInput] = useState({ limit: 5, start: 0 });
+  console.log('coins=', coins);
+  console.log('input=', input);
   // Define function to all API
   async function fetchCoins() {
     const data = await API.get('cskcryptoapi', '/coins');
