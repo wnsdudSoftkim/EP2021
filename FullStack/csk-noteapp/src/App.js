@@ -122,10 +122,10 @@ function App() {
       <List.Item
         style={styles.item}
         actions={[
-          <p style={styles.p} onClick={() => deleteNote(item)}>
+          <p style={styles.p} onClick={() => deleteNote(item)} type='primary'>
             Delete
           </p>,
-          <p style={styles.p} onClick={() => updateNote(item)}>
+          <p style={styles.p} onClick={() => updateNote(item)} type='primary'>
             {item.completed ? 'completed' : 'mark completed'}
           </p>,
         ]}

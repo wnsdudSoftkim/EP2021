@@ -12,6 +12,13 @@ import {
 } from './graphql/mutations';
 import { onCreateNote } from './graphql/subscriptions';
 
+const initialState = {
+  notes: [],
+  loading: true,
+  error: false,
+  form: { name: '', description: '' },
+};
+
 const CLIENT_ID = uuid();
 
 function reducer(state, action) {
@@ -30,13 +37,6 @@ function reducer(state, action) {
       return state;
   }
 }
-
-const initialState = {
-  notes: [],
-  loading: true,
-  error: false,
-  form: { name: '', description: '' },
-};
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -122,10 +122,10 @@ function App() {
       <List.Item
         style={styles.item}
         actions={[
-          <p style={styles.p} onClick={() => deleteNote(item)}>
+          <p style={styles.p} onClick={() => deleteNote(item)} type='primary'>
             Delete
           </p>,
-          <p style={styles.p} onClick={() => updateNote(item)}>
+          <p style={styles.p} onClick={() => updateNote(item)} type='primary'>
             {item.completed ? 'completed' : 'mark completed'}
           </p>,
         ]}
@@ -167,7 +167,7 @@ const styles = {
   container: { padding: 20 },
   input: { marginBottom: 10 },
   item: { textAlign: 'left' },
-  p: { color: '#1890ff' },
+  p: { color: '#1890ff', background: 'blue' },
 };
 
 export default App;
