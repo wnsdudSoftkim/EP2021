@@ -56,6 +56,7 @@ function App() {
   async function fetchNotes() {
     try {
       const notesData = await API.graphql(graphqlOperation(listNotes));
+      console.log('items=', notesData.data.listNotes.items);
       dispatch({ type: 'SET_NOTES', notes: notesData.data.listNotes.items });
     } catch (err) {
       console.log('error: ', err);
@@ -64,6 +65,7 @@ function App() {
   }
 
   function onChange(e) {
+    console.log(`name=${e.target.name}, value=${e.target.value}`);
     dispatch({ type: 'SET_INPUT', name: e.target.name, value: e.target.value });
   }
 
@@ -86,9 +88,14 @@ function App() {
     const index = state.notes.findIndex((n) => n.id === note.id);
     const notes = [...state.notes];
     notes[index].completed = !note.completed;
+    console.log(`upd note=${JSON.stringify(notes[index])}`);
     dispatch({ type: 'SET_NOTES', notes });
     try {
-      await API.graphql(graphqlOperation(UpdateNote, { input: notes[index] }));
+      await API.graphql(
+        graphqlOperation(UpdateNote, {
+          input: { id: note.id, completed: notes[index].completed },
+        })
+      );
       console.log('note successfully updated!');
     } catch (err) {
       console.log('error: ', err);
