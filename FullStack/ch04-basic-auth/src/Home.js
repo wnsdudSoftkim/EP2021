@@ -1,12 +1,12 @@
 import React from 'react';
 import Container from './Container';
 
-function Public() {
+const Home = () => {
   return (
     <Container>
-      <h1>Public route</h1>
+      <h1>Home -- Public route</h1>
     </Container>
   );
-}
+};
 
-export default Public;
+export default Home;
