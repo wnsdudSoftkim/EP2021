@@ -1,14 +1,18 @@
 import React, { useEffect } from 'react';
 import { Auth } from 'aws-amplify';
+import { useNavigate } from 'react-router-dom';
 
 const protectedRoute =
   (Comp, route = '/profile') =>
   (props) => {
+    const navigate = useNavigate();
     async function checkAuthState() {
       try {
-        await Auth.currentAuthenticatedUser();
+        const data = await Auth.currentAuthenticatedUser();
+        console.log('prot auth data=', data);
       } catch (err) {
-        props.history.push(route);
+        // props.history.push(route);
+        navigate(route);
       }
     }
     useEffect(() => {

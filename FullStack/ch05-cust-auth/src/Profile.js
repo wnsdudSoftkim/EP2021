@@ -19,6 +19,7 @@ function Profile() {
   async function checkUser() {
     try {
       const data = await Auth.currentUserPoolUser();
+      console.log('auth data=', data);
       const userInfo = { username: data.username, ...data.attributes };
       setUser(userInfo);
     } catch (err) {

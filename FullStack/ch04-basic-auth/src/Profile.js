@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from 'antd';
 import { Auth } from 'aws-amplify';
-import { withAuthenticator } from '@aws-amplify/ui-react';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
+import { useNavigate } from 'react-router-dom';
 import Container from './Container';
 
 function Profile() {
+  const navigate = useNavigate();
   useEffect(() => {
     checkUser();
   }, []);
@@ -19,7 +21,11 @@ function Profile() {
     }
   }
   function signOut() {
-    Auth.signOut().catch((err) => console.log('error signing out: ', err));
+    Auth.signOut()
+      .then((res) => {
+        navigate('/');
+      })
+      .catch((err) => console.log('error signing out: ', err));
   }
   return (
     <Container>
@@ -28,6 +34,7 @@ function Profile() {
       <h3>Email: {user.email}</h3>
       {/* <h4>Phone: {user.phone_number}</h4> */}
       <Button onClick={signOut}>Sign Out</Button>
+      <AmplifySignOut />
     </Container>
   );
 }
