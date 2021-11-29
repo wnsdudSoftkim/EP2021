@@ -24,7 +24,8 @@ exports.handler = async (event, context, callback) => {
   };
 
   if (isAdmin) {
-    (groupParams.GroupName = 'Admin'), (userParams.GroupName = 'Admin');
+    groupParams.GroupName = 'Admin';
+    userParams.GroupName = 'Admin';
 
     // first check to see if the groups exists, and if not create the group
     try {

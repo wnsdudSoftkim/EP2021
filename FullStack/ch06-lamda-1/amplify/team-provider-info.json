@@ -16,7 +16,11 @@
         "ch06lamda1b5f95b20PostConfirmation": {
           "GROUP": "Admin",
           "deploymentBucketName": "amplify-ch06lamda1-dev-104532-deployment",
-          "s3Key": "amplify-builds/ch06lamda1b5f95b20PostConfirmation-58773330596a335a4a59-build.zip"
+          "s3Key": "amplify-builds/ch06lamda1b5f95b20PostConfirmation-6b647673773146667566-build.zip"
+        },
+        "S3Triggera56727f4": {
+          "deploymentBucketName": "amplify-ch06lamda1-dev-104532-deployment",
+          "s3Key": "amplify-builds/S3Triggera56727f4-776f2b44584734473159-build.zip"
         }
       },
       "auth": {
