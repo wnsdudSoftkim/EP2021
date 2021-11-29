@@ -78,6 +78,53 @@ this category in the project: ch06lamdas3
 $ amplify push
 
 
+$ yarn build
+$ npm install -g serve
 
+$ serve -s build -l 4000
 
 </pre>
+
+## S3 hosting
+
+<pre>
+S3 에서 create bucket --> bucket name --> ch06-lambda-resize.com
+bucket properties tab
+제일 아래
+Static website hosting
+
+Enable
+Host a static website
+index.html
+[save]
+
+Permission tab
+
+Edit Block public access (bucket settings)
+
+Bucket policy
+[Edit]
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::ch06-lambda-resize.com/*"
+        }
+    ]
+}
+
+
+$ cd build
+$ aws s3 sync . s3://ch06-lambda-resize.com --profile fullstack
+
+</pre>
+
+### S3 Property Bottom
+
+Bucket website endpoint
+
+http://ch06-lambda-resize.com.s3-website.ap-northeast-2.amazonaws.com
