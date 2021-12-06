@@ -110,6 +110,20 @@ Successfully added resource ch07ecommerceapi locally
 
 <pre>
 $ amplify push
+
+Add User
+
+aws cognito-idp sign-up --profile fullstack \
+  --region ap-northeast-2 \
+  --client-id 17kb2mrgo66n1p03ebmuv75mlj \
+  --username admin \
+  --password Passw0rd! \
+  --user-attributes Name="email",Value="admin@example.com"
+
+aws cognito-idp admin-confirm-sign-up --profile fullstack \
+  --region ap-northeast-2 \
+  --user-pool-id ap-northeast-2_HxxWSKXPM \
+  --username admin
 </pre>
 
 ## Creating Frontend
