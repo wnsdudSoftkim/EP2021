@@ -105,3 +105,28 @@ Succesfully added the Lambda function locally
 Successfully added resource ch07ecommerceapi locally
 
 </pre>
+
+### Update .../amplify/backend/function/ch07ecommercefunction/src/app.js
+
+<pre>
+$ amplify push
+</pre>
+
+## Creating Frontend
+
+<pre>
+Admin.js
+
+Container.js
+
+Main.js
+
+Nav.js
+
+Profile.js
+
+Router.js
+
+checkUser.js
+
+</pre>

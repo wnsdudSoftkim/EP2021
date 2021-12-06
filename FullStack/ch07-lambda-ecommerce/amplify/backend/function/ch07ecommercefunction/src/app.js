@@ -50,27 +50,95 @@ app.use(function (req, res, next) {
 });
 
 /**********************
- * Example get method *
+ * get method *
  **********************/
+async function getGroupsForUser(event) {
+  let userSub =
+    event.requestContext.identity.cognitoAuthenticationProvider.split(
+      ':CognitoSignIn:'
+    )[1];
+  let userParams = {
+    UserPoolId: userpoolId,
+    Filter: `sub = "${userSub}"`,
+  };
+  let userData = await cognito.listUsers(userParams).promise();
+  const user = userData.Users[0];
+  var groupParams = {
+    UserPoolId: userpoolId,
+    Username: user.Username,
+  };
+  const groupData = await cognito.adminListGroupsForUser(groupParams).promise();
+  return groupData;
+}
 
-app.get('/products', function (req, res) {
-  // Add your code here
-  res.json({ success: 'get call succeed!', url: req.url });
+async function canPerformAction(event, group) {
+  return new Promise(async (resolve, reject) => {
+    if (!event.requestContext.identity.cognitoAuthenticationProvider) {
+      return reject();
+    }
+    const groupData = await getGroupsForUser(event);
+    const groupsForUser = groupData.Groups.map((group) => group.GroupName);
+    if (groupsForUser.includes(group)) {
+      resolve();
+    } else {
+      reject('user not in group, cannot perform action..');
+    }
+  });
+}
+
+async function getItems() {
+  var params = {
+    TableName: ddb_table_name,
+  };
+  try {
+    const data = await docClient.scan(params).promise();
+    return data;
+  } catch (err) {
+    return err;
+  }
+}
+
+app.get('/products', async function (req, res) {
+  try {
+    const data = await getItems();
+    res.json({
+      data: data,
+    });
+  } catch (err) {
+    res.json({
+      error: err,
+    });
+  }
+});
+
+app.post('/products', async function (req, res) {
+  const { event } = req.apiGateway;
+  const { body } = req;
+  try {
+    await canPerformAction(event, 'Admin');
+    const input = { ...body, id: uuid() };
+    var params = {
+      TableName: ddb_table_name,
+      Item: input,
+    };
+    await docClient.put(params).promise();
+    res.json({
+      success: 'item saved to database..',
+    });
+  } catch (err) {
+    res.json({
+      error: err,
+    });
+  }
 });
 
 app.get('/products/*', function (req, res) {
-  // Add your code here
   res.json({ success: 'get call succeed!', url: req.url });
 });
 
 /****************************
  * Example post method *
  ****************************/
-
-app.post('/products', function (req, res) {
-  // Add your code here
-  res.json({ success: 'post call succeed!', url: req.url, body: req.body });
-});
 
 app.post('/products/*', function (req, res) {
   // Add your code here
@@ -81,9 +149,19 @@ app.post('/products/*', function (req, res) {
  * Example put method *
  ****************************/
 
-app.put('/products', function (req, res) {
-  // Add your code here
-  res.json({ success: 'put call succeed!', url: req.url, body: req.body });
+app.put('/products', async function (req, res) {
+  try {
+    var params = {
+      TableName: ddb_table_name,
+      Key: { id: req.body.id },
+      UpdateExpression: 'set price = :newprice',
+      ExpressionAttributeValues: { ':newprice': 100 },
+    };
+    await docClient.update(params).promise();
+    res.json({ success: 'successfully updated item' });
+  } catch (err) {
+    res.json({ error: err });
+  }
 });
 
 app.put('/products/*', function (req, res) {
@@ -92,12 +170,22 @@ app.put('/products/*', function (req, res) {
 });
 
 /****************************
- * Example delete method *
+ * delete method *
  ****************************/
 
-app.delete('/products', function (req, res) {
-  // Add your code here
-  res.json({ success: 'delete call succeed!', url: req.url });
+app.delete('/products', async function (req, res) {
+  const { event } = req.apiGateway;
+  try {
+    await canPerformAction(event, 'Admin');
+    var params = {
+      TableName: ddb_table_name,
+      Key: { id: req.body.id },
+    };
+    await docClient.delete(params).promise();
+    res.json({ success: 'successfully deleted item' });
+  } catch (err) {
+    res.json({ error: err });
+  }
 });
 
 app.delete('/products/*', function (req, res) {
