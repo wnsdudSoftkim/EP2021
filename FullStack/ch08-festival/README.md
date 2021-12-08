@@ -11,37 +11,37 @@ $ yarn add aws-amplify antd @aws-amplify/ui-react react-router-dom
 <pre>
 $ amplify init
 $ amplify add auth
- Do you want to use the default authentication and security configuration? <b>Default configuration
- How do you want users to be able to sign in? <b>Username
- Do you want to configure advanced settings? <b>Yes, I want to make some additional changes.
- What attributes are required for signing up? <b>Email
- Do you want to enable any of the following capabilities? <b>Add User to Group
-? Enter the name of the group to which users will be added. <b>Admin
+ Do you want to use the default authentication and security configuration? <b>Default configuration</b>
+ How do you want users to be able to sign in? <b>Username</b>
+ Do you want to configure advanced settings? <b>Yes, I want to make some additional changes.</b>
+ What attributes are required for signing up? <b>Email</b>
+ Do you want to enable any of the following capabilities? <b>Add User to Group</b>
+? Enter the name of the group to which users will be added. <b>Admin</b>
 Successfully added resource ch08festival2c9eab4fPostConfirmation locally.
-? Do you want to edit your add-to-group function now? <b>Yes
-? Choose your default editor: <b>Visual Studio Code
+? Do you want to edit your add-to-group function now? <b>Yes</b>
+? Choose your default editor: <b>Visual Studio Code</b>
 Edit the file in your editor: /home/cskim/git-repo/EP2021/FullStack/ch08-festival/amplify/backend/function/ch08festival2c9eab4fPostConfirmation/src/add-to-group.js
 ? Press enter to continue 
 Successfully added auth resource ch08festival2c9eab4f locally
 
 $ amplify add api
-? Please select from one of the below mentioned services: <b>GraphQL
-? Provide API name: <b>ch08festivalapi
-? Choose the default authorization type for the API <b>Amazon Cognito User Pool
+? Please select from one of the below mentioned services: <b>GraphQL</b>
+? Provide API name: <b>ch08festivalapi</b>
+? Choose the default authorization type for the API <b>Amazon Cognito User Pool</b>
 Use a Cognito user pool configured as a part of this project.
 ? Do you want to configure advanced settings for the GraphQL API <b>Yes, I want to make some additi
-onal changes.
-? Configure additional auth types? <b>Yes
-? Choose the additional authorization types you want to configure for the API <b>API key
+onal changes.</b>
+? Configure additional auth types? <b>Yes</b>
+? Choose the additional authorization types you want to configure for the API <b>API key</b>
 API key configuration
-? Enter a description for the API key: <b>public
-? After how many days from now the API key should expire (1-365): <b>365
-? Enable conflict detection? <b>No
-? Do you have an annotated GraphQL schema? <b>No
+? Enter a description for the API key: <b>public</b>
+? After how many days from now the API key should expire (1-365): <b>365</b>
+? Enable conflict detection? <b>No</b>
+? Do you have an annotated GraphQL schema? <b>No</b>
 ? Choose a schema template: Single object with fields (e.g., “Todo” with ID, name, description)
 
-? Do you want to edit the schema now? <b>Yes
-? Choose your default editor: <b>Visual Studio Code
+? Do you want to edit the schema now? <b>Yes</b>
+? Choose your default editor: <b>Visual Studio Code</b>
 Edit the file in your editor: /home/cskim/git-repo/EP2021/FullStack/ch08-festival/amplify/backend/api/ch08festivalapi/schema.graphql
 Successfully added resource ch08festivalapi locally
 
@@ -59,7 +59,7 @@ $ amplify push
 ├──────────┼──────────────────────────────────────┼───────────┼───────────────────┤
 │ Api      │ ch08festivalapi                      │ Create    │ awscloudformation │
 └──────────┴──────────────────────────────────────┴───────────┴───────────────────┘
-? Are you sure you want to continue? <b>Yes
+? Are you sure you want to continue? <b>Yes</b>
 
 The following types do not have '@auth' enabled. Consider using @auth with @model
          - Stage
@@ -69,13 +69,13 @@ Learn more about @auth here: https://docs.amplify.aws/cli/graphql-transformer/au
 
 GraphQL schema compiled successfully.
 
-? Do you want to generate code for your newly created GraphQL API <b>Yes
-? Choose the code generation language target <b>javascript
+? Do you want to generate code for your newly created GraphQL API <b>Yes</b>
+? Choose the code generation language target <b>javascript</b>
 ? Enter the file name pattern of graphql queries, mutations and subscriptions <b>src/graphql/**/*.j
-s
+s</b>
 ? Do you want to generate/update all possible GraphQL operations - queries, mutations and subscr
 iptions <b>Yes
-? Enter maximum statement depth [increase from default if your schema is deeply nested] <b>2
+? Enter maximum statement depth [increase from default if your schema is deeply nested] <b>2</b>
 
 ✔ All resources are updated in the cloud
 
