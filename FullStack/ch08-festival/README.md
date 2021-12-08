@@ -74,7 +74,7 @@ GraphQL schema compiled successfully.
 ? Enter the file name pattern of graphql queries, mutations and subscriptions <b>src/graphql/**/*.j
 s</b>
 ? Do you want to generate/update all possible GraphQL operations - queries, mutations and subscr
-iptions <b>Yes
+iptions <b>Yes</b>
 ? Enter maximum statement depth [increase from default if your schema is deeply nested] <b>2</b>
 
 ✔ All resources are updated in the cloud
