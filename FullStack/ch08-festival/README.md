@@ -3,7 +3,7 @@
 <pre>
 $ npx create-react-app ch08-festival
 $ cd ch08-festival
-$ yarn add aws-amplify antd @aws-amplify/ui-react react-router-dom
+$ yarn add aws-amplify antd @aws-amplify/ui-react@1.2.25 react-router-dom
 </pre>
 
 ## Build Backend
