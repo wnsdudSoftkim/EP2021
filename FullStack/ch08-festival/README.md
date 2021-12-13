@@ -29,8 +29,7 @@ $ amplify add api
 ? Provide API name: <b>ch08festivalapi</b>
 ? Choose the default authorization type for the API <b>Amazon Cognito User Pool</b>
 Use a Cognito user pool configured as a part of this project.
-? Do you want to configure advanced settings for the GraphQL API <b>Yes, I want to make some additi
-onal changes.</b>
+? Do you want to configure advanced settings for the GraphQL API <b>Yes, I want to make some additional changes.</b>
 ? Configure additional auth types? <b>Yes</b>
 ? Choose the additional authorization types you want to configure for the API <b>API key</b>
 API key configuration
