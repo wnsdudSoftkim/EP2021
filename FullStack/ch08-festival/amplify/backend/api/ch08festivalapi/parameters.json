@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "ch08festivalapi",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authch08festival2c9eab4f",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

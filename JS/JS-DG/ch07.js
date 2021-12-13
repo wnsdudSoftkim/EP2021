@@ -1,6 +1,6 @@
 let empty = []; // An array with no elements
 let primes = [2, 3, 5, 7, 11]; // An array with 5 numeric elements
-let misc = [1.1, true, "a"]; // 3 elements of various types + trailing comma
+let misc = [1.1, true, 'a']; // 3 elements of various types + trailing comma
 
 let base = 1024;
 let table = [base, base + 1, base + 2, base + 3];
@@ -26,33 +26,33 @@ original[0] = 100;
 console.log(same);
 console.log(copy);
 
-let digits = [..."0123456789ABCDEF"];
+let digits = [...'0123456789ABCDEF'];
 console.log(digits);
 
 a = new Array(); //[]
 console.log(a);
-a = new Array(5, 4, 3, 2, 1, "testing, testing");
+a = new Array(5, 4, 3, 2, 1, 'testing, testing');
 console.log(a);
-a = Array.of(5, 4, 3, 2, 1, "testing, testing");
+a = Array.of(5, 4, 3, 2, 1, 'testing, testing');
 console.log(a);
 copy = Array.from(original); // copy
 console.log(a[a.length - 1]);
 
 a = []; // Start with an empty array
-a.push("zero"); // Add a value at the end. a = ["zero"]
-a.push("one", "two");
+a.push('zero'); // Add a value at the end. a = ["zero"]
+a.push('one', 'two');
 console.log(a);
 delete a[1];
 console.log(a);
 
-let letters = [..."Hello world"]; // An array of letters
+let letters = [...'Hello world']; // An array of letters
 console.log(letters);
-let string = "";
+let string = '';
 for (let le of letters) {
   string += le;
 }
 console.log(string);
-let uppercase = "";
+let uppercase = '';
 letters.forEach((le) => {
   // Note arrow function syntax here
   uppercase += le.toUpperCase();
@@ -61,7 +61,7 @@ console.log(uppercase);
 let uppers = letters.map((le) => le.toUpperCase());
 console.log(uppers);
 
-uppercase = uppers.reduce((prev, curr) => prev + curr, "");
+uppercase = uppers.reduce((prev, curr) => prev + curr, '');
 console.log(uppercase);
 
 let data = [1, 2, 3, 4, 5];
@@ -70,6 +70,7 @@ data.forEach(function (v, i, a) {
 });
 console.log(data);
 
+console.log('==============================');
 a = [1, 2, 3];
 a.map((x) => x * x);
 console.log(a);
@@ -80,7 +81,7 @@ console.log(a.filter((x) => x < 3));
 
 a = [1, 2, 3, 4, 5];
 console.log(a.reduce((prev, curr) => prev + curr, 0));
-
+console.log('==============================');
 a = [1, 2, 3];
 b = [4, 5];
 console.log(a.concat(b));
@@ -126,5 +127,10 @@ console.log(a);
 console.log(a.splice(1, 1)); // => [4]; a is now [1]
 console.log(a);
 
-
-
+// Use IIFE
+(() => {
+  let x = 100;
+  let y = 200;
+  [x, y] = [y, x];
+  console.log(x, y);
+})();

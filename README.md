@@ -1,13 +1,16 @@
 # EP2021
+
 Enterprise Programming (HUFS 2021)
 >forked from Professor CSKim
 
 ## Install VirtaulBox
+
 [VirtualBox](https://www.virtualbox.org)
 
 Download and Install
 
 ## Ubuntu Install
+
 [Ubuntu 20.04 Download](https://ubuntu.com/download/desktop)
 
 Click Button Download and Download ISO File
@@ -15,6 +18,7 @@ Click Button Download and Download ISO File
 ## Build Ubuntu Virtual Machine
 
 ## Ubuntu Initial Set-up
+
 ```
 sudo apt update
 sudo apt upgrade
@@ -75,6 +79,7 @@ npm install -g yarn
 ```
 
 ## Git Clone
+
 <pre>
 자신의 root folder에서
 <b>git clone https://github.com/chomskim/EP2021.git</b>
@@ -82,9 +87,17 @@ npm install -g yarn
 그 후에는 수시로 pull 하면 된다
 </pre>
 
+자신의 GitHub를 만들면
+
+```
+git config --global user.name <github-username>
+git config --global user.email <github-email>
+```
+
 ## VS Code Setting For React Dev
 
 ### Extension 설치
+
 - Auto Rename Tag
 - Bracket Pair Colorizer
 - ES7 React/Redux/GraphQL/React-Native snippets
@@ -92,6 +105,7 @@ npm install -g yarn
 - Prettier - Code formatter
 
 ### Setting
+
 ```
 "emmet.includeLanguages": {
     "javascript": "javascriptreact"
@@ -104,5 +118,53 @@ npm install -g yarn
 "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  ```
+```
 
+## Create React App
+
+```
+$ npx create-react-app hello-react
+$ cd hello-react
+$ npm start
+
+$ npx create-react-app test-js
+```
+
+### Copy hello-react project to hello-react-copy
+
+### Copy package.json, public, src
+
+```
+$ cd hello-react-copy
+$ npm install
+$ npm start
+```
+
+### Install AWS CLI
+
+```
+$ sudo apt install -y python3-pip
+$ sudo apt install -y build-essential libssl-dev libffi-dev python3-dev
+$ sudo apt install -y python3-venv
+$ pip3 install awscli
+```
+
+### Configure AWS
+
+```
+$ aws configure
+AWS Access Key ID [None]: ********************
+AWS Secret Access Key [None]: ****************************************
+Default region name [None]: ap-northeast-2
+Default output format [None]:
+```
+
+### Installing and Configuring the Amplify CLI
+
+```
+npm install -g @aws-amplify/cli
+```
+
+## 서버리스 웹앱 개발 튜토링 사이트 URL
+
+[serverless web app using AWS, react and AI](https://medium.com/develop-and-deploy-a-complex-serverless-web-app)

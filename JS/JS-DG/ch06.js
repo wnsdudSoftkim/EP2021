@@ -2,23 +2,23 @@ let empty = {}; // An object with no properties
 let point = { x: 0, y: 0 }; // Two numeric properties
 //let p2 = { x: point.x, y: point.y + 1 }; // More complex values
 let book = {
-  "main title": "JavaScript", // These property names include spaces,
-  "sub-title": "The Definitive Guide", // and hyphens, so use string literals.
-  for: "all audiences", // for is reserved, but no quotes.
+  'main title': 'JavaScript', // These property names include spaces,
+  'sub-title': 'The Definitive Guide', // and hyphens, so use string literals.
+  for: 'all audiences', // for is reserved, but no quotes.
   author: {
     // The value of this property is
-    firstname: "David", // itself an object.
-    surname: "Flanagan",
+    firstname: 'David', // itself an object.
+    surname: 'Flanagan',
   },
 };
-console.log(book["main title"]);
-console.log(book["for"]);
+console.log(book['main title']);
+console.log(book['for']);
 console.log(book.author);
 console.log(book.author.firstname);
-console.log(book.author["surname"]);
+console.log(book.author['surname']);
 
 let o = { x: 1, y: 2, z: 3 }; // Three enumerable own properties
-o.propertyIsEnumerable("toString"); // => false: not enumerable
+o.propertyIsEnumerable('toString'); // => false: not enumerable
 for (let p in o) {
   // Loop through the properties
   console.log(p + o[p]); // Prints x, y, and z, but not toString
@@ -35,12 +35,12 @@ console.log(book == newBook);
 console.log(Object.is(book, newBook));
 const num = 100000000000000;
 console.log(num.toLocaleString());
-console.log(parseInt(num.toLocaleString().replace(/,/g, "")));
+console.log(parseInt(num.toLocaleString().replace(/,/g, '')));
 //console.log(parseInt(num.toLocaleString().replaceAll(',','')));
 
 const p =
-  "The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?";
-console.log(p.replace("dog", "monkey"));
+  'The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?';
+console.log(p.replace('dog', 'monkey'));
 
 let x = 1;
 let y = 2;
@@ -52,9 +52,9 @@ console.log(o1);
 o1 = { x, y };
 console.log(o1);
 
-const PROPERTY_NAME = "p1";
+const PROPERTY_NAME = 'p1';
 function computePropertyName() {
-  return "p" + 2;
+  return 'p' + 2;
 }
 console.log(computePropertyName());
 let px = {
@@ -102,8 +102,8 @@ square = {
 console.log(square.area()); // => 100
 
 const paip = {
-  name: "Paradigms of Artificial Intelligence Programming",
-  author: "Peter Norvig",
+  name: 'Paradigms of Artificial Intelligence Programming',
+  author: 'Peter Norvig',
   isbn: 1558601910,
 };
 console.log(paip);
@@ -112,4 +112,25 @@ console.log(n, id);
 const { name, isbn } = paip; //const { name:name, isbn:isbn} = paip;
 console.log(name, isbn);
 
+let myObj = {
+  'hello world': 'hi',
+  foo: function (x) {
+    return x + 1;
+  },
+  hello: { k1: 1, k2: 2 },
+  world: [1, 2, 3, 4],
+};
+console.log(myObj);
+console.log(myObj['hello world']);
+console.log(myObj.foo(1));
+console.log(myObj['foo'](1));
+console.log(myObj.hello);
+console.log(myObj['world']);
+console.log(JSON.stringify(myObj));
 
+// Use IIFE
+(() => {
+  let obj = { x: 100, y: 200, z: 300 };
+  let { x, y } = obj;
+  console.log(x, y);
+})();

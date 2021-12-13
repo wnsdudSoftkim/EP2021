@@ -1,0 +1,18 @@
+{
+  "trigger": true,
+  "modules": [
+    "add-to-group"
+  ],
+  "parentResource": "ch08festival2c9eab4f",
+  "functionName": "ch08festival2c9eab4fPostConfirmation",
+  "resourceName": "ch08festival2c9eab4fPostConfirmation",
+  "parentStack": "auth",
+  "triggerEnvs": [],
+  "triggerDir": "/home/cskim/.nvm/versions/node/v12.22.6/lib/node_modules/@aws-amplify/cli/node_modules/amplify-category-auth/provider-utils/awscloudformation/triggers/PostConfirmation",
+  "triggerTemplate": "PostConfirmation.json.ejs",
+  "triggerEventPath": "PostConfirmation.event.json",
+  "roleName": "ch08festival2c9eab4fPostConfirmation",
+  "skipEdit": true,
+  "GROUP": "Admin",
+  "enableCors": false
+}

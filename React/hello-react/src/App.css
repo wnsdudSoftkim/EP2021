@@ -1,0 +1,8 @@
+.App {
+  text-align: center;
+}
+/* Project Specific CSS */
+.left-align {
+  display: inline-block;
+  text-align: left;
+}

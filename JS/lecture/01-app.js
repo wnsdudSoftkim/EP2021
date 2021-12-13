@@ -74,15 +74,16 @@ const userList = [
 userList.forEach((user) => {
   console.log(user);
 });
+console.log('==============================');
 
 let user1 = userList[0];
 console.log(user1);
 
-let { id, name, amount } = user1;
+let { id, name, amount } = user1; // Desturing
 console.log(id, name, amount);
 
 let newUser = { id, user: name };
 console.log(newUser);
 
-newUser = { ...user1, user: name };
+newUser = { ...user1, user: name }; // Spread
 console.log(newUser);
