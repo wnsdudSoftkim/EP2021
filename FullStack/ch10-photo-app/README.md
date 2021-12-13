@@ -1,5 +1,6 @@
 # Ch10 Build
 
+```
 $ npx create-react-app ch10-photo-app
 
 $ cd ch10-photo-app
@@ -44,12 +45,15 @@ $ amplify add storage
 
 $ amplify push --y
 
+```
+
 ## Build Frontend (Client-side App)
 
 Edit index.js App.js CreatePost.js Posts.js
 
 ## Add User
 
+```
 aws cognito-idp sign-up --profile fullstack \
  --region ap-northeast-2 \
  --client-id 7nnkbshbkoalmv1uv3glfv0vhj \
@@ -63,3 +67,5 @@ aws cognito-idp admin-confirm-sign-up --profile fullstack \
  --username admin
 
 $ yarn start
+
+```
